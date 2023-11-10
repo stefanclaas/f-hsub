@@ -104,7 +104,7 @@ func main() {
 	case 2:
 		findValidSubjectsInFile(cmdargs[0], cmdargs[1])
 	default:
-		fmt.Println("Usage: f-hsub <filename> <hsub-pw>")
+		fmt.Println("Usage: f-hsub <filename> <key>")
 		os.Exit(2)
 	}
 }

@@ -1,5 +1,5 @@
 # f-hsub
-Find hsub messages in a saved file.
+Find hsub messages in an mbox file.
 This software was created for the program suck,
 which fetches all (new) articles from Usenet Groups.
 

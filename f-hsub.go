@@ -18,7 +18,7 @@ type hsub struct {
 func (h *hsub) hsubtest() bool {
 	sublen := len(h.subject)
 	if sublen <= 32 || sublen > 96 {
-		fmt.Println("Error: not a valid hsub")
+		fmt.Println("Not a valid hsub.")
 		return false
 	}
 	iv, err := hex.DecodeString(h.subject[:16])

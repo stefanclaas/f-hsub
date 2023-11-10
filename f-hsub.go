@@ -69,7 +69,7 @@ Loop:
 						fmt.Println("Error creating output file:", err)
 						os.Exit(1)
 					}
-					fmt.Println("Valid Subject:", h.subject)
+					fmt.Println("Valid hsub:", h.subject)
 					for _, header := range headers {
 						fmt.Fprintln(outputFile, header)
 					}

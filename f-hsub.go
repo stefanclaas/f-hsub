@@ -63,7 +63,7 @@ Loop:
 					if outputFile != nil {
 						outputFile.Close()
 					}
-					outputFileName := fmt.Sprintf("valid_subject_%s.txt", h.subject)
+					outputFileName := fmt.Sprintf("valid_hsub_%s.txt", h.subject)
 					outputFile, err = os.Create(outputFileName)
 					if err != nil {
 						fmt.Println("Error creating output file:", err)

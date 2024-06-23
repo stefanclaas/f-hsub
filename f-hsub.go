@@ -55,10 +55,16 @@ Loop:
 			headers = nil
 			continue Loop
 		}
+		var parts []string
 		if strings.Contains(line, "Subject:") {
-			parts := strings.Split(line, "Subject:")
-			if len(parts) > 1 {
-				h := &hsub{key: key, subject: strings.TrimSpace(parts[1])}
+			parts = strings.Split(line, "Subject:")
+		} else if strings.Contains(line, "X-Hsub:") {
+			parts = strings.Split(line, "X-Hsub:")
+		}
+		if len(parts) > 1 {
+			h := &hsub{key: key, subject: strings.TrimSpace(parts[1])}
+			sublen := len(h.subject)
+			if sublen >= 32 && sublen <= 80 {
 				if h.hsubtest() {
 					if outputFile != nil {
 						outputFile.Close()

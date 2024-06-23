@@ -8,5 +8,5 @@ When valid hsubs are found, in an mbox file, each article will be seperately sav
 [2024-23-06] 
 
 Added a feature to look not only for a hashed 'Subject:' but also
-for a 'H-Hsub:' hashed header, in case people like to keep the
+for a 'X-Hsub:' hashed header, in case people like to keep the
 orignal Subject line, without hsub content.
